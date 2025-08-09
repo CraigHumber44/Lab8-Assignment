@@ -49,3 +49,17 @@ let [score1, score2] = scores
 console.log("Score 1: ", score1); // Output:85
 console.log("Score 2: ", score2); // Output:92
 
+
+
+console.log("");
+
+console.log("Part 4:");
+//Part 4: The Spread Operator
+
+
+let clonedStudent = { ...student, graduationYear: 2025 };
+console.log("Cloned Student and Graduation Year:", clonedStudent);
+
+const newCourses = ["java 101", "Web Design"];
+const allCourses = [...student.courses, ...newCourses];
+console.log("Merged Courses:", allCourses);
