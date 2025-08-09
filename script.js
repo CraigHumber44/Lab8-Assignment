@@ -83,3 +83,20 @@ console.log("Courses now:", student.courses);
 console.log("Total number of courses:", student.numberOfCourses());
 
 
+
+// Bonus Task
+
+console.log("");
+console.log("Bonus Task:");
+
+const totalScore2 = scores.reduce((acc, curr) => { 
+    return acc + curr; 
+}, 0);
+
+let averageScore2 = totalScore2 / scores.length;
+
+console.log("Scores:", totalScore2);
+console.log("Average Score:", averageScore2); 
+
+
+
