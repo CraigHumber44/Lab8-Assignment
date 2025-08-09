@@ -55,11 +55,31 @@ console.log("");
 
 console.log("Part 4:");
 //Part 4: The Spread Operator
-
-
 let clonedStudent = { ...student, graduationYear: 2025 };
 console.log("Cloned Student and Graduation Year:", clonedStudent);
 
 const newCourses = ["java 101", "Web Design"];
 const allCourses = [...student.courses, ...newCourses];
 console.log("Merged Courses:", allCourses);
+
+
+
+//Part 4: Object Methods
+console.log("");
+console.log("Part 5");
+
+// Add methods
+student.addCourse = function(courseName) {
+  this.courses.push(courseName);
+  return `Added: ${courseName}`;
+};
+
+student.numberOfCourses = function() {
+  return this.courses.length;
+};
+
+console.log(student.addCourse("Art"));
+console.log("Courses now:", student.courses);
+console.log("Total number of courses:", student.numberOfCourses());
+
+
