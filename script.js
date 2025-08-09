@@ -10,11 +10,11 @@ let student = {
     name: "Mike",
     age: 25,
     enrolled: true,
-    courses: ["Math", "Computer", "English"],  
-    basicStudentInfo: function() {
+    courses: ["Math", "Computer", "English"],
+    basicStudentInfo: function () {
         // I had issues with this part as it wasn't in the class example. 
         return `Student: ${this.name}, Age: ${this.age}, Enrolled: ${this.enrolled}`;
-        
+
         // console.log(`Student: ${this.name}, Age: ${this.age}, Enrolled: ${this.enrolled}`); = I previously did it this way and returned "undifined"
     }
 };
@@ -34,4 +34,18 @@ console.log(jsonString); // Output:
 
 let jsonToObject = JSON.parse(jsonString);
 console.log("Student converted from JASON:", jsonToObject); // Output:
+
+
+
+console.log("");
+
+console.log("Part 3:");
+//Part 3: Using Destructuring Assignment
+let { name, courses } = student;
+console.log("Destructured name"); // Output: Mike
+console.log("Destructured courses"); // 'Math', 'Computer', 'English' 
+let scores = [85, 92, 78, 90];
+let [score1, score2] = scores
+console.log("Score 1: ", score1); // Output:85
+console.log("Score 2: ", score2); // Output:92
 
